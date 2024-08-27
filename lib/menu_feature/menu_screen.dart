@@ -13,8 +13,13 @@ class MainScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Flutter Basics"),
       ),
-      body: const MenuOptions(
-          titles: {0: "Buttons", 1: "Alert", 2: "Bottom Navigation"}),
+      body: const MenuOptions(titles: {
+        0: "Buttons",
+        1: "Alert",
+        2: "Text Fields",
+        3: "Example of Registration Page Form",
+        4: "Bottom Navigation"
+      }),
     );
   }
 }
@@ -40,6 +45,14 @@ class MenuOptions extends StatelessWidget {
               case 1:
                 {
                   Get.toNamed(Routes.alerts);
+                }
+              case 2:
+                {
+                  Get.toNamed(Routes.textField);
+                }
+              case 3:
+                {
+                  Get.toNamed(Routes.formScreen);
                 }
             }
           },
