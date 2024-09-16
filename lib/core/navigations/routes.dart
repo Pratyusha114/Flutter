@@ -6,6 +6,7 @@ class Routes {
   static const alerts = "/alerts";
   static const textField = "/textFields";
   static const formScreen = "/formScreen";
+  static const dropDownScreen = "/dropDownScreen";
 
   static const bottomNavigationScreen = "/bottomNavigation";
   static const generalBottomNav = "/generalBottomNav";
