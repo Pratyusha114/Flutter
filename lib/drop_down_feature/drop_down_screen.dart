@@ -1,6 +1,9 @@
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_basics/drop_down_feature/drop_down_search.dart';
 import 'package:get/get.dart';
+
+import 'drop_down_with_text_field.dart';
 
 class DropDownScreen extends StatelessWidget {
   const DropDownScreen({super.key});
@@ -20,12 +23,17 @@ class DropDownScreen extends StatelessWidget {
       ),
       body: const Center(
           child: Column(
-        children: [
-          Text("General Drop Down"),
-          GeneralDropDown(),
-          DropDownWithTextField()
-        ],
-      )),
+            children: [
+              Text("General Drop Down"),
+              GeneralDropDown(),
+               Text("Drop down with Text Field"),
+              DropDownWithTextField(),
+              Text("Search Drop Down"),
+              SearchableDropdown()
+
+            ],
+          )
+      ),
     );
   }
 }
@@ -38,50 +46,41 @@ class GeneralDropDown extends StatefulWidget {
 }
 
 class _GeneralDropDownState extends State<GeneralDropDown> {
-  List<String> dropDownList = [
-    "Apples",
-    "Bananas",
-    "Grapes",
-    "Oranges",
-    "pineapples",
+
+  List<GeneralDropdownModel> dropDownList = [
+    GeneralDropdownModel(1,"Apples"),
+    GeneralDropdownModel(2,"Bananas"),
+    GeneralDropdownModel(3,"Grapes"),
+    GeneralDropdownModel(4,"Oranges"),
+    GeneralDropdownModel(5,"pineapples"),
   ];
 
-  String? initialValue = "";
+  GeneralDropdownModel? initialValue;
 
   @override
   Widget build(BuildContext context) {
     return DropdownButton2(
+      value: initialValue,
         alignment: Alignment.bottomRight,
         isExpanded: true,
         items: dropDownList
-            .map((String str) => DropdownMenuItem(value: str, child: Text(str)))
+            .map((GeneralDropdownModel item) => DropdownMenuItem(value: item, child: Text(item.title)))
             .toList(),
-        onChanged: (str) {
+        onChanged: (item) {
           setState(() {
-            initialValue = str!;
+            initialValue = item;
           });
         });
   }
 }
 
-class DropDownWithTextField extends StatefulWidget {
-  const DropDownWithTextField({super.key});
+class GeneralDropdownModel {
 
-  @override
-  State<DropDownWithTextField> createState() => _DropDownWithTextFieldState();
+  final int id;
+  final String title;
+
+  GeneralDropdownModel(this.id, this.title);
 }
 
-class _DropDownWithTextFieldState extends State<DropDownWithTextField> {
-  List<String> dropDownList = ["pens", "scale", "pencils"];
 
-  @override
-  Widget build(BuildContext context) {
-    return DropdownButtonFormField2(
-      decoration: const InputDecoration(border: OutlineInputBorder()),
-      items: dropDownList
-          .map((str) => DropdownMenuItem(value: str, child: Text(str)))
-          .toList(),
-      onChanged: (str) {},
-    );
-  }
-}
+
