@@ -58,6 +58,9 @@ class MenuOptions extends StatelessWidget {
               case 4: {
                 Get.toNamed(Routes.dropDownScreen);
               }
+              case 5: {
+                Get.toNamed(Routes.bottomNavigationScreen);
+              }
             }
           },
         );

@@ -11,5 +11,5 @@ class Routes {
   static const bottomNavigationScreen = "/bottomNavigation";
   static const generalBottomNav = "/generalBottomNav";
   static const bottomNavWithBadges = "/BottomNavWithBadges";
-  static const bottomNavWithFab = "/BottomNavWithFAB";
+  static const bottomNavWithNotch = "/BottomNavWithFAB";
 }

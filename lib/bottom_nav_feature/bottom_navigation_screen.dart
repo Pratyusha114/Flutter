@@ -30,7 +30,7 @@ class BottomNavigationMenu extends StatelessWidget {
   final Map<int, String> titles = {
     0: "general Bottom Nav",
     1: "BottomNav with Badges",
-    2: "Bottom Nav with FAB"
+    2: "Bottom Nav with Notch"
   };
 
   BottomNavigationMenu({super.key});
@@ -47,7 +47,10 @@ class BottomNavigationMenu extends StatelessWidget {
                   Get.toNamed(Routes.generalBottomNav);
                 }
                 case 1: {
-
+                    Get.toNamed(Routes.bottomNavWithBadges);
+                }
+                case 2: {
+                  Get.toNamed(Routes.bottomNavWithNotch);
                 }
               }
             },
