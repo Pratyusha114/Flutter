@@ -14,7 +14,8 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
+    return SafeArea(
+        child: GetMaterialApp(
       title: 'Flutter Basics',
       getPages: routes,
       initialRoute: Routes.launcherScreen,
@@ -22,7 +23,6 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-    );
+    ));
   }
 }
-

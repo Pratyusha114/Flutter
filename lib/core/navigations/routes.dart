@@ -12,4 +12,12 @@ class Routes {
   static const generalBottomNav = "/generalBottomNav";
   static const bottomNavWithBadges = "/BottomNavWithBadges";
   static const bottomNavWithNotch = "/BottomNavWithFAB";
+
+  static const listViewScreen = "/ListViewScreen";
+  static const generalListView = "/GeneralListView";
+  static const gridView = "/GridView";
+  static const gridViewWithCount = "/GridViewCount";
+  static const gridViewWithBuilder = "/GridViewWithBuilder";
+  static const gridViewWithExtent = "/GridViewWithExpand";
+  static const staggeredListView = "/staggeredListView";
 }

@@ -19,7 +19,8 @@ class MainScreen extends StatelessWidget {
         2: "Text Fields",
         3: "Example of Registration Page Form",
         4:"Drop Downs",
-        5: "Bottom Navigation"
+        5: "Bottom Navigation",
+        6: "List View"
       }),
     );
   }
@@ -60,6 +61,9 @@ class MenuOptions extends StatelessWidget {
               }
               case 5: {
                 Get.toNamed(Routes.bottomNavigationScreen);
+              }
+              case 6: {
+                Get.toNamed(Routes.listViewScreen);
               }
             }
           },
