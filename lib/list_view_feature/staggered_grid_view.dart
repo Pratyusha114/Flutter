@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
+import 'package:get/get.dart';
 
 class StaggeredGridView extends StatelessWidget {
   const StaggeredGridView({super.key});
@@ -9,7 +10,9 @@ class StaggeredGridView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-          onPressed: () {},
+          onPressed: () {
+            Get.back();
+          },
           icon: const Icon(Icons.arrow_back),
         ),
         title: const Text("Staggered Grid View"),
