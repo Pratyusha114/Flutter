@@ -18,9 +18,10 @@ class MainScreen extends StatelessWidget {
         1: "Alert",
         2: "Text Fields",
         3: "Example of Registration Page Form",
-        4:"Drop Downs",
+        4: "Drop Downs",
         5: "Bottom Navigation",
-        6: "List View"
+        6: "List View",
+        7: "App Bar"
       }),
     );
   }
@@ -56,15 +57,22 @@ class MenuOptions extends StatelessWidget {
                 {
                   Get.toNamed(Routes.formScreen);
                 }
-              case 4: {
-                Get.toNamed(Routes.dropDownScreen);
-              }
-              case 5: {
-                Get.toNamed(Routes.bottomNavigationScreen);
-              }
-              case 6: {
-                Get.toNamed(Routes.listViewScreen);
-              }
+              case 4:
+                {
+                  Get.toNamed(Routes.dropDownScreen);
+                }
+              case 5:
+                {
+                  Get.toNamed(Routes.bottomNavigationScreen);
+                }
+              case 6:
+                {
+                  Get.toNamed(Routes.listViewScreen);
+                }
+              case 7:
+                {
+                  Get.toNamed(Routes.appBarScreen);
+                }
             }
           },
         );

@@ -20,4 +20,5 @@ class Routes {
   static const gridViewWithBuilder = "/GridViewWithBuilder";
   static const gridViewWithExtent = "/GridViewWithExpand";
   static const staggeredListView = "/staggeredListView";
+  static const appBarScreen = "/appBarScreen";
 }

@@ -1,4 +1,5 @@
 import 'package:flutter_basics/alerts_feature/alert_screen.dart';
+import 'package:flutter_basics/app_bar/app_bar_with_actions.dart';
 import 'package:flutter_basics/bottom_nav_feature/badges_bottom_nav/badges_bottom_nav_screen.dart';
 import 'package:flutter_basics/bottom_nav_feature/bottom_navigation_screen.dart';
 import 'package:flutter_basics/core/navigations/routes.dart';
@@ -38,4 +39,5 @@ List<GetPage> routes = [
   GetPage(name: Routes.gridViewWithBuilder, page: () => const GridViewWithBuilder()),
   GetPage(name: Routes.gridViewWithExtent, page: () => const GridViewWithExtent()),
   GetPage(name: Routes.staggeredListView, page: () => const StaggeredGridView()),
+  GetPage(name: Routes.appBarScreen, page: () => const AppBarWithActions()),
 ];
