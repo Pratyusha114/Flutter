@@ -21,7 +21,8 @@ class MainScreen extends StatelessWidget {
         4: "Drop Downs",
         5: "Bottom Navigation",
         6: "List View",
-        7: "App Bar"
+        7: "App Bar",
+        8: "Sample Api Call with MVVM"
       }),
     );
   }
@@ -72,6 +73,10 @@ class MenuOptions extends StatelessWidget {
               case 7:
                 {
                   Get.toNamed(Routes.appBarScreen);
+                }
+              case 8:
+                {
+                  Get.toNamed(Routes.sampleApiCall);
                 }
             }
           },

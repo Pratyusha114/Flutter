@@ -21,4 +21,5 @@ class Routes {
   static const gridViewWithExtent = "/GridViewWithExpand";
   static const staggeredListView = "/staggeredListView";
   static const appBarScreen = "/appBarScreen";
+  static const sampleApiCall = "/sampleApiCall";
 }
