@@ -22,4 +22,5 @@ class Routes {
   static const staggeredListView = "/staggeredListView";
   static const appBarScreen = "/appBarScreen";
   static const sampleApiCall = "/sampleApiCall";
+  static const localDatabase = "/localDatabase";
 }

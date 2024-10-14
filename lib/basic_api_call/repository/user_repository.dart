@@ -3,10 +3,11 @@ import 'dart:convert';
 import 'package:flutter_basics/basic_api_call/model/api_service.dart';
 import 'package:flutter_basics/basic_api_call/model/users_model.dart';
 import 'package:flutter_basics/core/resource.dart';
-import 'package:get/get.dart';
 
 class UserRepository {
-  final ApiService _apiService = Get.find();
+  final ApiService _apiService;
+
+  UserRepository(this._apiService);
 
   Future<Resource<List<UserModel>>> getAllUsers() async {
     try {
